@@ -1,6 +1,6 @@
 package com.binance.api.examples;
 
-import com.binance.api.client.constant.C;
+import com.binance.api.client.constant.P;
 import com.binance.api.client.domain.account.Account;
 import com.binance.api.client.domain.account.Trade;
 import com.binance.api.client.BinanceApiClientFactory;
@@ -14,7 +14,7 @@ import java.util.List;
 public class AccountEndpointsExample {
 
   public static void main(String[] args) {
-    BinanceApiClientFactory factory = BinanceApiClientFactory.newInstance(C.API_KEY, C.SECRET);
+    BinanceApiClientFactory factory = BinanceApiClientFactory.newInstance(P.API_KEY, P.SECRET);
     BinanceApiRestClient client = factory.newRestClient();
 
     // Get account balances

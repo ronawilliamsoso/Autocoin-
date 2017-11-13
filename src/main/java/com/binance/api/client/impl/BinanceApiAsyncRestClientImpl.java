@@ -1,6 +1,6 @@
 package com.binance.api.client.impl;
 
-import com.binance.api.client.constant.C;
+import com.binance.api.client.constant.P;
 import com.binance.api.client.constant.Constant;
 import com.binance.api.client.domain.account.Account;
 import com.binance.api.client.domain.account.DepositHistory;

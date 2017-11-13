@@ -1,6 +1,6 @@
 package com.binance.api.client.domain.account.request;
 
-import com.binance.api.client.constant.C;
+import com.binance.api.client.constant.P;
 import com.binance.api.client.constant.Constant;
 
 import org.apache.commons.lang3.builder.ToStringBuilder;

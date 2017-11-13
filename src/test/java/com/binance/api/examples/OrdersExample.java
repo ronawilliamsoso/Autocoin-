@@ -10,7 +10,7 @@ import com.binance.api.client.domain.account.request.OrderStatusRequest;
 import com.binance.api.client.exception.BinanceApiException;
 import com.binance.api.client.BinanceApiClientFactory;
 import com.binance.api.client.BinanceApiRestClient;
-import com.binance.api.client.constant.C;
+import com.binance.api.client.constant.P;
 
 import java.util.List;
 
@@ -23,7 +23,7 @@ import static com.binance.api.client.domain.account.NewOrder.marketBuy;
 public class OrdersExample {
 
   public static void main(String[] args) {
-    BinanceApiClientFactory factory = BinanceApiClientFactory.newInstance(C.API_KEY, C.SECRET);
+    BinanceApiClientFactory factory = BinanceApiClientFactory.newInstance(P.API_KEY, P.SECRET);
     BinanceApiRestClient client = factory.newRestClient();
 
     // Getting list of open orders

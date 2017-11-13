@@ -1,6 +1,6 @@
 package com.binance.api.examples;
 
-import com.binance.api.client.constant.C;
+import com.binance.api.client.constant.P;
 import com.binance.api.client.domain.account.Account;
 import com.binance.api.client.domain.account.AssetBalance;
 import com.binance.api.client.BinanceApiClientFactory;
@@ -77,7 +77,7 @@ public class AccountBalanceCacheExample {
   }
 
   public static void main(String[] args) {
-    new AccountBalanceCacheExample( C.API_KEY, C.SECRET);
+    new AccountBalanceCacheExample( P.API_KEY, P.SECRET);
    
   }
 }

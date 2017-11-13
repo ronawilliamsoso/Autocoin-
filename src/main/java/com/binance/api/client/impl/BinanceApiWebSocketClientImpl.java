@@ -1,6 +1,5 @@
 package com.binance.api.client.impl;
 
-import com.binance.api.client.constant.C;
 import com.binance.api.client.constant.Constant;
 import com.binance.api.client.domain.event.AggTradeEvent;
 import com.binance.api.client.domain.event.CandlestickEvent;

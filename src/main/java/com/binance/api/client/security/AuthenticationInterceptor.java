@@ -1,6 +1,6 @@
 package com.binance.api.client.security;
 
-import com.binance.api.client.constant.C;
+import com.binance.api.client.constant.P;
 import com.binance.api.client.constant.Constant;
 
 import okhttp3.HttpUrl;
