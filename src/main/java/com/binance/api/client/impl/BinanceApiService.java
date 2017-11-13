@@ -1,6 +1,7 @@
 package com.binance.api.client.impl;
 
 import com.binance.api.client.constant.C;
+import com.binance.api.client.constant.Constant;
 import com.binance.api.client.domain.OrderSide;
 import com.binance.api.client.domain.OrderType;
 import com.binance.api.client.domain.TimeInForce;
@@ -65,75 +66,75 @@ public interface BinanceApiService {
 
   // Account endpoints
 
-  @Headers(C.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+  @Headers(Constant.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
   @POST("/api/v3/order")
   Call<NewOrderResponse> newOrder(@Query("symbol") String symbol, @Query("side") OrderSide side, @Query("type") OrderType type,
                                   @Query("timeInForce") TimeInForce timeInForce, @Query("quantity") String quantity, @Query("price") String price,
                                   @Query("stopPrice") String stopPrice, @Query("icebergQty") String icebergQty,
                                   @Query("recvWindow") Long recvWindow, @Query("timestamp") Long timestamp);
 
-  @Headers(C.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+  @Headers(Constant.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
   @POST("/api/v3/order/test")
   Call<Void> newOrderTest(@Query("symbol") String symbol, @Query("side") OrderSide side, @Query("type") OrderType type,
                           @Query("timeInForce") TimeInForce timeInForce, @Query("quantity") String quantity, @Query("price") String price,
                           @Query("stopPrice") String stopPrice, @Query("icebergQty") String icebergQty,
                           @Query("recvWindow") Long recvWindow, @Query("timestamp") Long timestamp);
 
-  @Headers(C.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+  @Headers(Constant.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
   @GET("/api/v3/order")
   Call<Order> getOrderStatus(@Query("symbol") String symbol, @Query("orderId") Long orderId,
                                     @Query("origClientOrderId") String origClientOrderId, @Query("recvWindow") Long recvWindow,
                                     @Query("timestamp") Long timestamp);
 
-  @Headers(C.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+  @Headers(Constant.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
   @DELETE("/api/v3/order")
   Call<Void> cancelOrder(@Query("symbol") String symbol, @Query("orderId") Long orderId,
                              @Query("origClientOrderId") String origClientOrderId, @Query("newClientOrderId") String newClientOrderId,
                              @Query("recvWindow") Long recvWindow, @Query("timestamp") Long timestamp);
 
-  @Headers(C.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+  @Headers(Constant.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
   @GET("/api/v3/openOrders")
   Call<List<Order>> getOpenOrders(@Query("symbol") String symbol, @Query("recvWindow") Long recvWindow, @Query("timestamp") Long timestamp);
 
-  @Headers(C.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+  @Headers(Constant.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
   @GET("/api/v3/allOrders")
   Call<List<Order>> getAllOrders(@Query("symbol") String symbol, @Query("orderId") Long orderId,
                                  @Query("limit") Integer limit, @Query("recvWindow") Long recvWindow, @Query("timestamp") Long timestamp);
 
-  @Headers(C.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+  @Headers(Constant.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
   @GET("/api/v3/account")
   Call<Account> getAccount(@Query("recvWindow") Long recvWindow, @Query("timestamp") Long timestamp);
 
-  @Headers(C.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+  @Headers(Constant.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
   @GET("/api/v3/myTrades")
   Call<List<Trade>> getMyTrades(@Query("symbol") String symbol, @Query("limit") Integer limit, @Query("fromId") Long fromId,
                                 @Query("recvWindow") Long recvWindow, @Query("timestamp") Long timestamp);
 
-  @Headers(C.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+  @Headers(Constant.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
   @POST("/wapi/v1/withdraw.html")
   Call<Void> withdraw(@Query("asset") String asset, @Query("address") String address, @Query("amount") String amount, @Query("name") String name,
                       @Query("recvWindow") Long recvWindow, @Query("timestamp") Long timestamp);
 
 
-  @Headers(C.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+  @Headers(Constant.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
   @POST("/wapi/v1/getDepositHistory.html")
   Call<DepositHistory> getDepositHistory(@Query("asset") String asset, @Query("recvWindow") Long recvWindow, @Query("timestamp") Long timestamp);
 
-  @Headers(C.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+  @Headers(Constant.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
   @POST("/wapi/v1/getWithdrawHistory.html")
   Call<WithdrawHistory> getWithdrawHistory(@Query("asset") String asset, @Query("recvWindow") Long recvWindow, @Query("timestamp") Long timestamp);
 
   // User stream endpoints
 
-  @Headers(C.ENDPOINT_SECURITY_TYPE_APIKEY_HEADER)
+  @Headers(Constant.ENDPOINT_SECURITY_TYPE_APIKEY_HEADER)
   @POST("/api/v1/userDataStream")
   Call<ListenKey> startUserDataStream();
 
-  @Headers(C.ENDPOINT_SECURITY_TYPE_APIKEY_HEADER)
+  @Headers(Constant.ENDPOINT_SECURITY_TYPE_APIKEY_HEADER)
   @PUT("/api/v1/userDataStream")
   Call<Void> keepAliveUserDataStream(@Query("listenKey") String listenKey);
 
-  @Headers(C.ENDPOINT_SECURITY_TYPE_APIKEY_HEADER)
+  @Headers(Constant.ENDPOINT_SECURITY_TYPE_APIKEY_HEADER)
   @DELETE("/api/v1/userDataStream")
   Call<Void> closeAliveUserDataStream(@Query("listenKey") String listenKey);
 }

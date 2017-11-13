@@ -5,55 +5,9 @@ package com.binance.api.client.constant;
  */
 public class C {
 
-  /**
-   * REST API base URL.
-   */
-  public static final String API_BASE_URL = "https://www.binance.com";
-
-  /**
-   * Streaming API base URL.
-   */
-  public static final String WS_API_BASE_URL = "wss://stream.binance.com:9443/ws";
-
-  /**
-   * HTTP Header to be used for API-KEY authentication.
-   */
-  public static final String API_KEY_HEADER = "X-MBX-APIKEY";
-
-  /**
-   * Decorator to indicate that an endpoint requires an API key.
-   */
-  public static final String ENDPOINT_SECURITY_TYPE_APIKEY = "APIKEY";
-  public static final String ENDPOINT_SECURITY_TYPE_APIKEY_HEADER = ENDPOINT_SECURITY_TYPE_APIKEY + ": #";
-
-  /**
-   * Decorator to indicate that an endpoint requires a signature.
-   */
-  public static final String ENDPOINT_SECURITY_TYPE_SIGNED = "SIGNED";
-  public static final String ENDPOINT_SECURITY_TYPE_SIGNED_HEADER = ENDPOINT_SECURITY_TYPE_SIGNED + ": #";
-
-  /**
-   * Default receiving window.
-   */
-  public static final long DEFAULT_RECEIVING_WINDOW = 6_000_000L;
-  
-  
-  
+ 
+  public static final String API_KEY = "tnBenv4qjBKn09z3N5Q55us2pepDmi67o1HUaRPXIkGxHE9H3sOL3";
+  public static final String SECRET = "sHZlLncuqm38OubZD20JSITPDFHQ03XLTbDlNj1ogdC7WPk3oiHoSl";
   
  
-  public static final String API_KEY = "https://www.binance.com";
-  public static final String SECRET = "https://www.binance.com";
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
 }

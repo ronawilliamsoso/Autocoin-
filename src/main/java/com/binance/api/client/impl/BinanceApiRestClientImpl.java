@@ -1,6 +1,7 @@
 package com.binance.api.client.impl;
 
 import com.binance.api.client.constant.C;
+import com.binance.api.client.constant.Constant;
 import com.binance.api.client.domain.account.Account;
 import com.binance.api.client.domain.account.DepositHistory;
 import com.binance.api.client.domain.account.NewOrder;
@@ -140,7 +141,7 @@ public class BinanceApiRestClientImpl implements BinanceApiRestClient {
 
   @Override
   public Account getAccount() {
-    return getAccount(C.DEFAULT_RECEIVING_WINDOW, System.currentTimeMillis());
+    return getAccount(Constant.DEFAULT_RECEIVING_WINDOW, System.currentTimeMillis());
   }
 
   @Override
@@ -150,27 +151,27 @@ public class BinanceApiRestClientImpl implements BinanceApiRestClient {
 
   @Override
   public List<Trade> getMyTrades(String symbol, Integer limit) {
-    return getMyTrades(symbol, limit, null, C.DEFAULT_RECEIVING_WINDOW, System.currentTimeMillis());
+    return getMyTrades(symbol, limit, null, Constant.DEFAULT_RECEIVING_WINDOW, System.currentTimeMillis());
   }
 
   @Override
   public List<Trade> getMyTrades(String symbol) {
-    return getMyTrades(symbol, null, null, C.DEFAULT_RECEIVING_WINDOW, System.currentTimeMillis());
+    return getMyTrades(symbol, null, null, Constant.DEFAULT_RECEIVING_WINDOW, System.currentTimeMillis());
   }
 
   @Override
   public void withdraw(String asset, String address, String amount, String name) {
-    executeSync(binanceApiService.withdraw(asset, address, amount, name, C.DEFAULT_RECEIVING_WINDOW, System.currentTimeMillis()));
+    executeSync(binanceApiService.withdraw(asset, address, amount, name, Constant.DEFAULT_RECEIVING_WINDOW, System.currentTimeMillis()));
   }
 
   @Override
   public DepositHistory getDepositHistory(String asset) {
-    return executeSync(binanceApiService.getDepositHistory(asset, C.DEFAULT_RECEIVING_WINDOW, System.currentTimeMillis()));
+    return executeSync(binanceApiService.getDepositHistory(asset, Constant.DEFAULT_RECEIVING_WINDOW, System.currentTimeMillis()));
   }
 
   @Override
   public WithdrawHistory getWithdrawHistory(String asset) {
-    return executeSync(binanceApiService.getWithdrawHistory(asset, C.DEFAULT_RECEIVING_WINDOW, System.currentTimeMillis()));
+    return executeSync(binanceApiService.getWithdrawHistory(asset,Constant.DEFAULT_RECEIVING_WINDOW, System.currentTimeMillis()));
   }
 
   // User stream endpoints
