@@ -1,13 +1,14 @@
 package com.binance.api.client.impl;
 
-import com.binance.api.client.BinanceApiCallback;
-import com.binance.api.client.BinanceApiWebSocketClient;
-import com.binance.api.client.constant.BinanceApiConstants;
+import com.binance.api.client.constant.C;
 import com.binance.api.client.domain.event.AggTradeEvent;
 import com.binance.api.client.domain.event.CandlestickEvent;
 import com.binance.api.client.domain.event.DepthEvent;
 import com.binance.api.client.domain.event.UserDataUpdateEvent;
 import com.binance.api.client.domain.market.CandlestickInterval;
+import com.binance.api.client.BinanceApiCallback;
+import com.binance.api.client.BinanceApiWebSocketClient;
+
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 
@@ -46,7 +47,7 @@ public class BinanceApiWebSocketClientImpl implements BinanceApiWebSocketClient,
   }
 
   private void createNewWebSocket(String channel, BinanceApiWebSocketListener<?> listener) {
-    String streamingUrl = String.format("%s/%s", BinanceApiConstants.WS_API_BASE_URL, channel);
+    String streamingUrl = String.format("%s/%s", C.WS_API_BASE_URL, channel);
     Request request = new Request.Builder().url(streamingUrl).build();
     client.newWebSocket(request, listener);
   }

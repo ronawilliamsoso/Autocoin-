@@ -1,8 +1,9 @@
 package com.binance.api.examples;
 
+import com.binance.api.client.constant.C;
+import com.binance.api.client.domain.account.Account;
 import com.binance.api.client.BinanceApiAsyncRestClient;
 import com.binance.api.client.BinanceApiClientFactory;
-import com.binance.api.client.domain.account.Account;
 
 /**
  * Examples on how to get account information.
@@ -10,7 +11,7 @@ import com.binance.api.client.domain.account.Account;
 public class AccountEndpointsExampleAsync {
 
   public static void main(String[] args) {
-    BinanceApiClientFactory factory = BinanceApiClientFactory.newInstance("YOUR_API_KEY", "YOUR_SECRET");
+    BinanceApiClientFactory factory = BinanceApiClientFactory.newInstance(C.API_KEY, C.SECRET);
     BinanceApiAsyncRestClient client = factory.newAsyncRestClient();
 
     // Get account balances (async)
@@ -26,6 +27,6 @@ public class AccountEndpointsExampleAsync {
     client.getDepositHistory("ETH", response -> System.out.println(response));
 
     // Withdraw (async)
-    client.withdraw("ETH", "0x123", "0.1", null, response -> {});
+    //client.withdraw("ETH", "0x123", "0.1", null, response -> {});
   }
 }

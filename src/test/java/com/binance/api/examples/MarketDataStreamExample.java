@@ -1,8 +1,8 @@
 package com.binance.api.examples;
 
+import com.binance.api.client.domain.market.CandlestickInterval;
 import com.binance.api.client.BinanceApiClientFactory;
 import com.binance.api.client.BinanceApiWebSocketClient;
-import com.binance.api.client.domain.market.CandlestickInterval;
 
 import java.io.IOException;
 

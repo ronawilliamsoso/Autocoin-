@@ -1,10 +1,10 @@
 package com.binance.api.examples;
 
+import com.binance.api.client.domain.market.OrderBook;
+import com.binance.api.client.domain.market.OrderBookEntry;
 import com.binance.api.client.BinanceApiClientFactory;
 import com.binance.api.client.BinanceApiRestClient;
 import com.binance.api.client.BinanceApiWebSocketClient;
-import com.binance.api.client.domain.market.OrderBook;
-import com.binance.api.client.domain.market.OrderBookEntry;
 
 import java.math.BigDecimal;
 import java.util.Comparator;

@@ -3,7 +3,7 @@ package com.binance.api.client.constant;
 /**
  * Constants used throughout Binance's API.
  */
-public class BinanceApiConstants {
+public class C {
 
   /**
    * REST API base URL.
@@ -36,4 +36,24 @@ public class BinanceApiConstants {
    * Default receiving window.
    */
   public static final long DEFAULT_RECEIVING_WINDOW = 6_000_000L;
+  
+  
+  
+  
+ 
+  public static final String API_KEY = "https://www.binance.com";
+  public static final String SECRET = "https://www.binance.com";
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 }

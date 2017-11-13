@@ -1,9 +1,10 @@
 package com.binance.api.client.impl;
 
-import com.binance.api.client.BinanceApiError;
-import com.binance.api.client.constant.BinanceApiConstants;
+import com.binance.api.client.constant.C;
 import com.binance.api.client.exception.BinanceApiException;
 import com.binance.api.client.security.AuthenticationInterceptor;
+import com.binance.api.client.BinanceApiError;
+
 import okhttp3.OkHttpClient;
 import org.apache.commons.lang3.StringUtils;
 import retrofit2.Call;
@@ -23,7 +24,7 @@ public class BinanceApiServiceGenerator {
 
     private static Retrofit.Builder builder =
         new Retrofit.Builder()
-            .baseUrl(BinanceApiConstants.API_BASE_URL)
+            .baseUrl(C.API_BASE_URL)
             .addConverterFactory(JacksonConverterFactory.create());
 
     private static Retrofit retrofit = builder.build();

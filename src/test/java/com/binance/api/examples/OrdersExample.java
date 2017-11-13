@@ -1,7 +1,5 @@
 package com.binance.api.examples;
 
-import com.binance.api.client.BinanceApiClientFactory;
-import com.binance.api.client.BinanceApiRestClient;
 import com.binance.api.client.domain.TimeInForce;
 import com.binance.api.client.domain.account.NewOrderResponse;
 import com.binance.api.client.domain.account.Order;
@@ -10,6 +8,9 @@ import com.binance.api.client.domain.account.request.CancelOrderRequest;
 import com.binance.api.client.domain.account.request.OrderRequest;
 import com.binance.api.client.domain.account.request.OrderStatusRequest;
 import com.binance.api.client.exception.BinanceApiException;
+import com.binance.api.client.BinanceApiClientFactory;
+import com.binance.api.client.BinanceApiRestClient;
+import com.binance.api.client.constant.C;
 
 import java.util.List;
 
@@ -22,7 +23,7 @@ import static com.binance.api.client.domain.account.NewOrder.marketBuy;
 public class OrdersExample {
 
   public static void main(String[] args) {
-    BinanceApiClientFactory factory = BinanceApiClientFactory.newInstance("YOUR_API_KEY", "YOUR_SECRET");
+    BinanceApiClientFactory factory = BinanceApiClientFactory.newInstance(C.API_KEY, C.SECRET);
     BinanceApiRestClient client = factory.newRestClient();
 
     // Getting list of open orders

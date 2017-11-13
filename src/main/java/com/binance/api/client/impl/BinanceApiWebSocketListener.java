@@ -1,8 +1,9 @@
 package com.binance.api.client.impl;
 
-import com.binance.api.client.BinanceApiCallback;
 import com.binance.api.client.exception.BinanceApiException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.binance.api.client.BinanceApiCallback;
+
 import okhttp3.Response;
 import okhttp3.WebSocket;
 import okhttp3.WebSocketListener;

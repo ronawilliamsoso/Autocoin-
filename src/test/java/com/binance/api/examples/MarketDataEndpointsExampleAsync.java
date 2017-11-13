@@ -1,7 +1,5 @@
 package com.binance.api.examples;
 
-import com.binance.api.client.BinanceApiAsyncRestClient;
-import com.binance.api.client.BinanceApiClientFactory;
 import com.binance.api.client.domain.account.Account;
 import com.binance.api.client.domain.market.AggTrade;
 import com.binance.api.client.domain.market.Candlestick;
@@ -10,6 +8,8 @@ import com.binance.api.client.domain.market.OrderBook;
 import com.binance.api.client.domain.market.TickerPrice;
 import com.binance.api.client.domain.market.TickerStatistics;
 import com.binance.api.client.exception.BinanceApiException;
+import com.binance.api.client.BinanceApiAsyncRestClient;
+import com.binance.api.client.BinanceApiClientFactory;
 
 import java.util.List;
 

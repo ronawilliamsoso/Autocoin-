@@ -1,6 +1,6 @@
 package com.binance.api.client.domain.account.request;
 
-import com.binance.api.client.constant.BinanceApiConstants;
+import com.binance.api.client.constant.C;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
@@ -18,7 +18,7 @@ public class OrderRequest {
   public OrderRequest(String symbol) {
     this.symbol = symbol;
     this.timestamp = System.currentTimeMillis();
-    this.recvWindow = BinanceApiConstants.DEFAULT_RECEIVING_WINDOW;
+    this.recvWindow = C.DEFAULT_RECEIVING_WINDOW;
   }
 
   public String getSymbol() {
