@@ -6,8 +6,8 @@ package com.binance.api.client.constant;
 public class C {
 
  
-  public static final String API_KEY = "tnBenv4qjBKn09z3N5Q55i9IUul5Gp2Xus2pepDmi67o1HUaRPXIkGxHE9H3sOL3";
-  public static final String SECRET = "sHZlLncuqm38OubZDlooDLsFW2h20JSITPDFHQ03XLTbDlNj1ogdC7WPk3oiHoSl";
+  public static final String API_KEY = "6UOusR17XBh8urdn42M7sY0cnc7WXsFrhvNMlRD7CqN7dBXd4mTzmAQnqAGtilE6";
+  public static final String SECRET = "5fMcRcsg2Pd3lH1c7K7u2Dij12dfu7e10ULjv4sexLfhenxiU4Fdw71AClqLJzd0";
   
  
 }
